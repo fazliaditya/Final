@@ -1,0 +1,80 @@
+import streamlit as st
+from db_handler import authenticate_user, create_users_table, register_user
+import time
+
+create_users_table()
+
+def login_page():
+    st.markdown("""
+        <style>
+            [data-testid="stSidebar"], [data-testid="stSidebarNav"] {
+                display: none;
+            }
+            .block-container {
+                padding-left: 2rem;
+                padding-right: 2rem;
+            }
+        </style>
+    """, unsafe_allow_html=True)
+
+    col1, _, col2 = st.columns([10, 1, 10])
+    
+    with col1:
+        st.image("demo.png")
+    
+    with col2:
+        st.title("Login / Sign Up")
+        email = st.text_input("E-mail")
+        password = st.text_input("Password", type="password")
+        confirm_password = st.text_input("Confirm Password (for Sign Up)", type="password")
+
+        col_login, col_signup = st.columns(2)
+
+        with col_login:
+            if st.button("Login"):
+                time.sleep(1)
+                if not (email and password):
+                    st.error("Please provide email and password")
+                elif authenticate_user(email, password):
+                    st.session_state['authenticated'] = True
+                    st.session_state['page'] = 'home'
+                    st.rerun()
+                else:
+                    st.error("Invalid login credentials")
+
+        with col_signup:
+            if st.button("Sign Up"):
+                if not (email and password and confirm_password):
+                    st.error("Please fill all fields for registration")
+                elif password != confirm_password:
+                    st.error("Passwords do not match")
+                else:
+                    if register_user(email, password):
+                        st.success("Registration successful. You can now log in.")
+                    else:
+                        st.error("Email already registered")
+
+def home_page():
+    st.set_page_config(layout="wide")
+    st.sidebar.title("About")
+    st.sidebar.info("A Streamlit map template")
+    st.sidebar.image("https://i.imgur.com/UbOXYAU.png")
+    st.title("Peta Gabungan Rencana Pertanian, Perkebunan, Agropolitan, dan Kawasan Strategis")
+    st.success("Berhasil login")
+
+    if st.button("Logout"):
+        st.session_state.clear()
+        st.session_state['page'] = 'login'
+        st.rerun()
+
+def main():
+    if 'page' not in st.session_state:
+        st.session_state['page'] = 'login'
+
+    if st.session_state['page'] == 'login':
+        login_page()
+    elif st.session_state['page'] == 'home':
+        home_page()
+
+if __name__ == "__main__":
+    main()
