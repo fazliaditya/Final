@@ -15,16 +15,12 @@ logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("PERUNTUKAN PERKEBUNAN")
+st.title("Rencana Kawasan Strategis")
+st.info("Peta menggunakan basemap: OpenStreetMap")
 
-# Kolom untuk basemap
-col1, col2 = st.columns([4, 1])
-from leafmap import basemaps
-options = list(basemaps.keys())
-index = options.index("OpenTopoMap")
 
-with col2:
-    basemap = st.selectbox("Select a basemap:", options, index)
+# Tata letak peta
+col1 = st.columns([1])[0]  # Hanya satu kolom tanpa selectbox
 
 with col1:
     # Buat objek peta
@@ -35,7 +31,8 @@ with col1:
         minimap_control=True
     )
 
-    m.add_basemap(basemap)
+    # Tambahkan basemap default
+    m.add_basemap("OpenTopoMap")
 
     # Path ke geojson titik
     geojson_path = "Data_Login/renc kaw strategis ek agropolytan.json"
@@ -125,14 +122,6 @@ legend_html = """
 <div style="display: flex; align-items: center; margin-top: 8px;">
     <div style="background-color: green; width: 20px; height: 20px; border: 1px solid black; margin-right: 8px;"></div>
     Kawasan Terpadu Utama
-</div>
-<div style="display: flex; align-items: center; margin-top: 8px;">
-    <div style="background-color: #FFD700; width: 20px; height: 20px; border: 1px solid black; margin-right: 8px;"></div>
-    Kawasan Strategis Ekonomi Agropolitan (A, B, C, D)
-</div>
-<div style="display: flex; align-items: center; margin-top: 8px;">
-    <div style="background-color: gray; width: 20px; height: 20px; border: 1px solid black; margin-right: 8px;"></div>
-    Lainnya / Tidak Diketahui
 </div>
 <div style="display: flex; align-items: center; margin-top: 8px;">
     <div style="border: 2px solid blue; width: 20px; height: 20px; margin-right: 8px;"></div>
