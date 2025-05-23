@@ -128,7 +128,7 @@ legend_html = """
 </div>
 
 <div style="display: flex; align-items: center;">
-    <div style="background-color: purple; width: 20px; height: 20px; margin-right: 8px; border: 1px solid black;"></div>
+    <div style="background-color: #A0522D; width: 20px; height: 20px; margin-right: 8px; border: 1px solid black;"></div>
     Kebun
 </div>
 
