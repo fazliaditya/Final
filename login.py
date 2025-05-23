@@ -59,7 +59,7 @@ def home_page():
     st.sidebar.title("About")
     st.sidebar.info("A Streamlit map template")
     st.sidebar.image("https://i.imgur.com/UbOXYAU.png")
-    st.title("Peta Gabungan Rencana Pertanian, Perkebunan, Agropolitan, dan Kawasan Strategis")
+    st.title("Halaman login WebGIS ini merupakan pintu masuk menuju sistem informasi geografis yang dirancang khusus untuk menampilkan rencana pengembangan wilayah pertanian dan perkebunan. Sistem ini dibangun dengan dasar data spasial dan perencanaan yang bersumber dari dokumen RTRW (Rencana Tata Ruang Wilayah) milik Bappeda serta informasi teknis dari Dinas Pekerjaan Umum.")
     st.success("Berhasil login")
 
     if st.button("Logout"):
