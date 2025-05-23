@@ -5,15 +5,19 @@ import json  # untuk parsing geojson string ke dict
 
 # Sidebar
 markdown = """
-Rencana Pertanian Perkebunan Di Kabupaten Pekalongan  
+Peta dan informasi yang ditampilkan merujuk pada dokumen resmi Rencana Tata Ruang Wilayah (RTRW) yang diperoleh dari instansi terkait
+BAPPEDA 
+Dinas Pekerjaan Umum
+Aplikasi ini bertujuan untuk memudahkan pihak perencana, pemerintah daerah, serta masyarakat umum dalam memahami arah pengembangan ruang untuk pertanian dan perkebunan berdasarkan kebijakan tata ruang yang berlaku
 """
-st.sidebar.title("About")
+st.sidebar.title("Keterangan")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "Logo Pertanian.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("RENCANA PERTANIAN")
+st.title("Peta Lahan Pertanian & Perkebunan" \
+"Menampilkan zonasi lahan yang direncanakan untuk kegiatan pertanian dan perkebunan berdasarkan dokumen RTRW dari BAPPEDA dan Dinas Pekerjaan Umum. Berguna untuk identifikasi kesesuaian lahan dan arah kebijakan agraria daerah")
 st.info("Peta menggunakan basemap: OpenStreetMap")
 
 # Buat objek peta

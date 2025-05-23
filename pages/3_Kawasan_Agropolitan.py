@@ -5,15 +5,18 @@ import json  # perlu untuk parsing geojson string ke dict
 
 # Sidebar
 markdown = """
-Rencana Pertanian Perkebunan Di Kabupaten Pekalongan
+Peta ini menampilkan kawasan agropolitan, yaitu wilayah pedesaan yang dikembangkan secara terencana sebagai pusat pertumbuhan berbasis pertanian dan agribisnis
+Data dan delineasi kawasan ini merujuk pada dokumen
+RTRW yang disusun oleh BAPPEDA
 """
-st.sidebar.title("About")
+st.sidebar.title("Keterangan")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "Logo Pertanian.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("PERUNTUKAN PERKEBUNAN")
+st.title("Peta Kawasan Agropolitan" \
+"Memetakan wilayah pedesaan yang dikembangkan sebagai pusat pertumbuhan ekonomi berbasis pertanian dan agribisnis. Kawasan ini menjadi simpul distribusi dan layanan produksi")
 st.info("Peta menggunakan basemap: OpenStreetMap")
 
 

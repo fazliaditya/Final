@@ -6,16 +6,19 @@ import folium
 
 # Sidebar
 markdown = """
-Rencana Pertanian Perkebunan Di Kabupaten Pekalongan
+Halaman ini menampilkan informasi terkait Rencana Kawasan Strategis Agropolitan, yaitu wilayah prioritas yang ditetapkan pemerintah daerah untuk pengembangan berbasis potensi lokal sektor pertanian, dengan pendekatan strategis lintas sektor
+Data bersumber dari
+BAPPEDA, melalui dokumen perencanaan strategis wilayah
 """
 
-st.sidebar.title("About")
+st.sidebar.title("Keterangan")
 st.sidebar.info(markdown)
-logo = "https://i.imgur.com/UbOXYAU.png"
+logo = "Logo Pertanian.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("Rencana Kawasan Strategis")
+st.title("Peta Kawasan Strategis Agropolitan" \
+"Menampilkan zona prioritas pembangunan strategis berbasis pertanian dan potensi lokal. Wilayah ini dirancang sebagai penggerak utama pembangunan ekonomi wilayah yang berkelanjutan")
 st.info("Peta menggunakan basemap: OpenStreetMap")
 
 

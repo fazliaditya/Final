@@ -20,7 +20,7 @@ def login_page():
     col1, _, col2 = st.columns([10, 1, 10])
     
     with col1:
-        st.image("demo.png")
+        st.image("Logo-Olivia-X-2025.png")
     
     with col2:
         st.title("Login / Sign Up")
@@ -56,10 +56,10 @@ def login_page():
 
 def home_page():
     st.set_page_config(layout="wide")
-    st.sidebar.title("About")
-    st.sidebar.info("A Streamlit map template")
-    st.sidebar.image("https://i.imgur.com/UbOXYAU.png")
-    st.title("Halaman login WebGIS ini merupakan pintu masuk menuju sistem informasi geografis yang dirancang untuk menampilkan rencana pengembangan wilayah pertanian dan perkebunan. Sistem ini dibangun dengan dasar data spasial dan perencanaan yang bersumber dari dokumen RTRW (Rencana Tata Ruang Wilayah) milik Bappeda serta informasi teknis dari Dinas Pekerjaan Umum.")
+    st.sidebar.title("Keterangan")
+    st.sidebar.info("WebGIS ini menampilkan peta interaktif yang mencakup rencana lahan pertanian dan perkebunan, kawasan agropolitan, serta kawasan strategis agropolitan, berdasarkan data RTRW dari BAPPEDA dan Dinas Pekerjaan Umum, guna mendukung perencanaan wilayah agraris yang terarah dan berkelanjutan")
+    st.sidebar.image("Logo Pertanian.png")
+    st.title("Halaman login WebGIS ini merupakan pintu masuk menuju sistem informasi geografis yang dirancang untuk menampilkan rencana pengembangan wilayah pertanian dan perkebunan. Sistem ini dibangun dengan dasar data spasial dan perencanaan yang bersumber dari dokumen RTRW (Rencana Tata Ruang Wilayah) milik Bappeda serta informasi teknis dari Dinas Pekerjaan Umum")
     st.success("Berhasil login")
 
     if st.button("Logout"):
