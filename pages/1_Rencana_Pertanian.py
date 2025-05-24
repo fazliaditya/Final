@@ -16,8 +16,7 @@ logo = "Logo Pertanian.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("Peta Lahan Pertanian & Perkebunan" \
-"Menampilkan zonasi lahan yang direncanakan untuk kegiatan pertanian dan perkebunan berdasarkan dokumen RTRW dari BAPPEDA dan Dinas Pekerjaan Umum. Berguna untuk identifikasi kesesuaian lahan dan arah kebijakan agraria daerah")
+st.title("Peta Lahan Pertanian & Perkebunan")
 st.info("Peta menggunakan basemap: OpenStreetMap")
 
 # Buat objek peta

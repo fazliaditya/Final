@@ -15,8 +15,7 @@ logo = "Logo Pertanian.png"
 st.sidebar.image(logo)
 
 # Judul halaman
-st.title("Peta Kawasan Agropolitan" \
-"Memetakan wilayah pedesaan yang dikembangkan sebagai pusat pertumbuhan ekonomi berbasis pertanian dan agribisnis. Kawasan ini menjadi simpul distribusi dan layanan produksi")
+st.title("Peta Kawasan Agropolitan")
 st.info("Peta menggunakan basemap: OpenStreetMap")
 
 
