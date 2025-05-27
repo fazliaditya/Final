@@ -59,7 +59,7 @@ def home_page():
     st.sidebar.title("Keterangan")
     st.sidebar.info("WebGIS ini menampilkan peta interaktif yang mencakup rencana lahan pertanian dan perkebunan, kawasan agropolitan, serta kawasan strategis agropolitan, berdasarkan data RTRW dari BAPPEDA dan Dinas Pekerjaan Umum, guna mendukung perencanaan wilayah agraris yang terarah dan berkelanjutan")
     st.sidebar.image("Logo Pertanian.png")
-    st.title("Halaman login WebGIS ini merupakan pintu masuk menuju sistem informasi geografis yang dirancang untuk menampilkan rencana pengembangan wilayah pertanian dan perkebunan. Sistem ini dibangun dengan dasar data spasial dan perencanaan yang bersumber dari dokumen RTRW (Rencana Tata Ruang Wilayah) milik Bappeda serta informasi teknis dari Dinas Pekerjaan Umum")
+    st.markdown("Halaman login WebGIS ini merupakan pintu masuk menuju sistem informasi geografis yang dirancang untuk menampilkan rencana pengembangan wilayah pertanian dan perkebunan. Sistem ini dibangun dengan dasar data spasial dan perencanaan yang bersumber dari dokumen RTRW (Rencana Tata Ruang Wilayah) milik Bappeda serta informasi teknis dari Dinas Pekerjaan Umum")
     st.success("Berhasil login")
 
     if st.button("Logout"):
